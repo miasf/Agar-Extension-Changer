@@ -1,0 +1,74 @@
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<style>
+.submit-button
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+<button id="A" submit-button">AGARPLUS V3</button>
+<button id="O"submit-button">OGAR V4</button>
+<button id="H"submit-button">HSLO V4</button>
+
+<script type="text/javascript">
+document.getElementById("O").onclick = function () {
+window.stop();
+document.documentElement.innerHTML = "";
+
+   
+$.ajax({
+ type:'post',
+ data:{},
+ url:'http://example.com/ogario.html',
+ dataType:'text',
+ success:function(response){
+   $('body').html(response);
+ }
+}); 
+
+
+
+       };
+
+    document.getElementById("A").onclick = function () {
+window.stop();
+document.documentElement.innerHTML = "";
+   
+$.ajax({
+ type:'post',
+ data:{},
+ url:'http://example.com/agarplus.html',
+ dataType:'html',
+ success:function(response){
+   $('body').html(response);
+ }
+}); 
+
+
+
+
+       };
+
+    document.getElementById("H").onclick = function () {
+window.stop();
+document.documentElement.innerHTML = "";
+   
+$.ajax({
+ type:'post',
+ data:{},
+ url:'http://example.com/hslo.html',
+ dataType:'html',
+ success:function(response){
+   $('body').html(response);
+ }
+}); 
+       };
+</script>    
